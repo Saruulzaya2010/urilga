@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Урилга</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee); 
+      text-align: center; 
+      padding: 50px;
+    }
+    .card {
+      background: white; 
+      padding: 30px; 
+      border-radius: 20px; 
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2); 
+      max-width: 400px; 
+      margin: auto; /* tovd bairshih bairshil */
+    }
+    button {
+      padding: 10px 20px; /* Дотор зай */
+      border: none; 
+      border-radius: 10px;
+      background: #ff6b81;
+      color: white; 
+      font-size: 16px;
+      cursor: pointer; /* Mouse pointer */
+    }
+    /* mouse deer ochihoor ongo oor bolno */
+    button:hover {
+      background: #ff4757;
+    }
+    /* nuutsan baisan heseg */
+    #hidden {
+      display: none; /* haragdahgui */
+      margin-top: 20px; /* deerees avah zai */
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1> Урилга </h1>
+    <p>Би таныг төрсөн өдөртөө урьж байна!</p>
+    <!--tovch -->
+    <button onclick="showInvite()">Зөвшөөрөх</button>
+    <!-- nuutsn baisan heseg -->
+    <div id="hidden">
+      <h2> Огноо: 11 сарын 10нд</h2>
+      <p> Хаана: Манай гэрт</p>
+      <p> Цаг: 15:00</p>
+      <p> Ирэхдээ бэлэг авчрахыг хүсье.</p>
+    </div>
+    <script>
+  function showInvite() {
+    var el = document.getElementById("hidden");
+    // haragdjiival nuuh
+    if (el.style.display === "block") {
+      el.style.display = "none";
+    } 
+    // nuutsn baival gargj ireh
+    else {
+      el.style.display = "block";
+    }
+  }
+    </script>
+</body>
+</html>
